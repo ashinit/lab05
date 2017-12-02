@@ -10,10 +10,10 @@ angular.module('collections').controller('CollectionsController', ['$scope', '$s
 	  	$scope.pageSize = 10;
 	  	$scope.offset = 0;
 	  	
-	  	$http. get('http://images-api.nasa.gov/search?q=mars').
-        then(function(response) {
-            $scope.search = response.data;
-        });
+	  	// $http. get('http://images-api.nasa.gov/search?q=mars').
+    //     then(function(response) {
+    //         $scope.search = Image.open(StringIO(response.content)
+    //     });
         
         
 	   // Page changed handler
