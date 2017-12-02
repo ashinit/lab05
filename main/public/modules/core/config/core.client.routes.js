@@ -9,17 +9,27 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 
 		// Home state routing
 		$stateProvider.
-		state('view-security', {
-			url: '/policies/security',
-			templateUrl: 'modules/core/views/view-security.client.view.html'
-		}).
-		state('policies', {
-			url: '/policies',
-			templateUrl: 'modules/core/views/policies.client.view.html'
+
+		// state('dmca-core', {
+		// 	url: '/core/dmca',
+		// 	templateUrl: 'modules/core/views/dmca-core.client.view.html'
+		// }).
+		// state('dmcacore', {
+		// 	url: '/core/dmca',
+		// 	templateUrl: 'modules/core/views/dmca-core.client.view.html'
+		// }).
+
+		state('core', {
+			url: '/core',
+			templateUrl: 'modules/core/views/core.client.view.html'
 		}).
 		state('home', {
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
+		}).
+		state('dmcacore', {
+			url: '/core/dmca',
+			templateUrl: 'modules/core/views/dmca-core.client.view.html'
 		});
 	}
 ]);

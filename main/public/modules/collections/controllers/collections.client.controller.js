@@ -2,14 +2,20 @@
 /*global angular*/
 ///* global $stateParams*/
 
-angular.module('collections').controller('CollectionsController', ['$scope', '$stateParams','$location',  'Collections',
-	function($scope, $stateParams,  $location, Collections) {
+angular.module('collections').controller('CollectionsController', ['$scope', '$stateParams','$location','$http', 'Collections',
+	function($scope, $stateParams,  $location, $http, Collections) {
 		//$scope.authentication = Authentication;
 		//$scope.authentication = Authentication;
 	  	$scope.currentPage = 1;
 	  	$scope.pageSize = 10;
 	  	$scope.offset = 0;
 	  	
+	  	$http. get('http://images-api.nasa.gov/search?q=mars').
+        then(function(response) {
+            $scope.search = response.data;
+        });
+        
+        
 	   // Page changed handler
 	   $scope.pageChanged = function() {
 	  		$scope.offset = ($scope.currentPage - 1) * $scope.pageSize;
@@ -25,6 +31,13 @@ angular.module('collections').controller('CollectionsController', ['$scope', '$s
 			});
 			
 
+			// var app = angular.module('myApp', []);
+			// app.controller('myCtrl', function($scope, $http) {
+		 //   $http.get("welcome.htm")
+		 //   .then(function(response) {
+		 //       	$scope.myWelcome = response.data;
+		 //   	});
+			// });
 
 			// Redirect after save
 			collection.$save(function(response) {

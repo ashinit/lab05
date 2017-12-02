@@ -7,6 +7,10 @@ angular.module('collections').config(['$stateProvider',
 	function($stateProvider) {
 		// Collections state routing
 		$stateProvider.
+		state('browse-collections', {
+			url: '/collections/browse',
+			templateUrl: 'modules/collections/views/browse-collections.client.view.html'
+		}).
 		state('edit-collection', {
 			url: '/collections/edit',
 			templateUrl: 'modules/collections/views/edit-collection.client.view.html'

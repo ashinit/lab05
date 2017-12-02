@@ -8,6 +8,7 @@ angular.module('collections').run(['Menus',
 		Menus.addMenuItem('topbar', 'Collections', 'collections', 'dropdown', '/collections(/create)?');
 		Menus.addSubMenuItem('topbar', 'collections', 'List Collections', 'collections');
 		Menus.addSubMenuItem('topbar', 'collections', 'New Collection', 'collections/create');
+		Menus.addSubMenuItem('topbar', 'collections', 'Browse', 'collections/browse');
 	}
 ]);
 
