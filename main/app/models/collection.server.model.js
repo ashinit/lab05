@@ -50,7 +50,7 @@ var CollectionSchema = new Schema({
     visibility:{
         type: String,
         enum:['public','private'],
-        default: ['public']
+        default: ['private']
     }
 });
 
