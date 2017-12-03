@@ -1,4 +1,4 @@
-<section data-ng-controller="HomeController">
+<section data-ng-controller="HomeController","CollectionsController">
 	<div class="jumbotron text-center">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
@@ -9,16 +9,20 @@
 		
 		<h1>NASA Image Collection Application</h1>
 	</div>
-	
-	
 	<div>
 		<h2>About</h2>
 		
 		<body>This is a NASA Image Collection Application! You can browse through exitising image colections or create your own! Create and account and learn more.</body>
 	
-	
-	
 	</div>
 	
+	 <div class="list-group">
+        <a data-ng-repeat="collection in collections" data-ng-href="#!/collections/{{collection._id}}" class="list-group-item">
+			<h4 class="list-group-item-heading" data-ng-bind="collection.name"></h4>
+            <span data-ng-bind="collection.description"></span>
+        </a>
+    </div>
+	<a href="https://finalfinallab-ashinit.c9users.io:8080/#!/core">Security and Privacy Policy</a>
+	<a href="https://finalfinallab-ashinit.c9users.io:8080/#!/core/dmca">DMCA</a>
 	<br>Created by Ashini Tennakoon
 </section>
