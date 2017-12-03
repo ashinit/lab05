@@ -5,6 +5,12 @@
 		<p data-ng-bind="collection.rating"></p>
 	</div>
 	
+	<form action="/action_page.php">
+  	Rate this Collection: <input type="text" name="rate"><br>
+  	
+  	<input type="submit" value="Rate" data-ng-click="calculateRating();">
+</form>
+	
 	
 	
 	<div class="pull-right">
