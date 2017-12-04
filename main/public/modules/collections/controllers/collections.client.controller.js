@@ -100,7 +100,7 @@ angular.module('collections').controller('CollectionsController', ['$scope', '$s
     	
     	//Rate a collection
     	$scope.collectionRate = function(collection) {
-        	$location.path('collections/' + collection._id);
+        	rating: this.rating;
     	};
 	}
 ]);
